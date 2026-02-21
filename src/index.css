@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  @apply bg-[#0a0a0a] text-white font-sans antialiased;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.btn-calc {
+  @apply flex items-center justify-center h-16 rounded-2xl text-xl font-medium transition-all active:scale-95;
+}
+
+.btn-number {
+  @apply bg-white/5 hover:bg-white/10 text-white;
+}
+
+.btn-operator {
+  @apply bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400;
+}
+
+.btn-action {
+  @apply bg-white/10 hover:bg-white/20 text-white/70;
+}
+
+.btn-equals {
+  @apply bg-emerald-500 hover:bg-emerald-600 text-black font-bold;
+}
+
+.glass-panel {
+  @apply bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
